@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic Three.js App</title>
+    <style>
+      html, body { margin: 0; padding: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+  	<button name="button" style="height:60px;width:110px" onclick="location.href='../index.html'"> VOLVER A PORTAFOLIO</button>
+	<br>
+	<br>
+	<br>
+    <script src="three.js"></script>
+    <script>
+      
+	  
+	 //variables iniciales
+	 
+	  
+	 var scene = new THREE.Scene();
+     var aspect = window.innerWidth / window.innerHeight;
+     var camera = new THREE.PerspectiveCamera( 75, aspect, 0.1, 10000);
+     var renderer = new THREE.WebGLRenderer();
+     renderer.setSize( window.innerWidth, window.innerHeight );
+     document.body.appendChild( renderer.domElement );
+	 
+	 //fondo
+	 
+	 
+
+
+         var geometry15 = new THREE.BoxGeometry( 10000, 10000, 3 );
+     var loaderfondo1 = new THREE.TextureLoader();
+     var texturefondo1 = loaderfondo1.load("fondo.jpg");	 
+     var material = new THREE.MeshBasicMaterial({
+     map: texturefondo1,  
+                                                });
+     var fondo1 = new THREE.Mesh( geometry15, material );
+     scene.add( fondo1 );
+	 
+	 
+
+var geometry15 = new THREE.BoxGeometry( 10000, 10000, 3 );
+     var loaderfondo2 = new THREE.TextureLoader();
+     var texturefondo2 = loaderfondo2.load("fondo.jpg");	 
+     var material = new THREE.MeshBasicMaterial({
+     map: texturefondo2,  
+                                                });
+     var fondo2 = new THREE.Mesh( geometry15, material );
+     scene.add( fondo2 );
+	 
+	 
+
+var geometry15 = new THREE.BoxGeometry( 3, 10000, 10000 );
+     var loaderfondo3 = new THREE.TextureLoader();
+     var texturefondo3 = loaderfondo3.load("fondo.jpg");	 
+     var material = new THREE.MeshBasicMaterial({
+     map: texturefondo3,  
+                                                });
+     var fondo3 = new THREE.Mesh( geometry15, material );
+     scene.add( fondo3 );
+	 
+	 
+	 
+var geometry15 = new THREE.BoxGeometry( 3, 10000, 10000 );
+     var loaderfondo4 = new THREE.TextureLoader();
+     var texturefondo4 = loaderfondo4.load("fondo.jpg");	 
+     var material = new THREE.MeshBasicMaterial({
+     map: texturefondo4,  
+                                                });
+     var fondo4 = new THREE.Mesh( geometry15, material );
+     scene.add( fondo4 );
+
+	 
+	 
+var geometry15 = new THREE.BoxGeometry( 10000, 3, 10000 );
+     var loaderfondo5 = new THREE.TextureLoader();
+     var texturefondo5 = loaderfondo5.load("fondo.jpg");	 
+     var material = new THREE.MeshBasicMaterial({
+     map: texturefondo5,  
+                                                });
+     var fondo5 = new THREE.Mesh( geometry15, material );
+     scene.add( fondo5 );
+	 
+	 
+
+var geometry15 = new THREE.BoxGeometry( 10000, 3, 10000 );
+     var loaderfondo6 = new THREE.TextureLoader();
+     var texturefondo6 = loaderfondo6.load("fondo.jpg");	 
+     var material = new THREE.MeshBasicMaterial({
+     map: texturefondo6,  
+                                                });
+     var fondo6 = new THREE.Mesh( geometry15, material );
+     scene.add( fondo6 );
+
+
+	 
+	 
+	 
+	 
+	 //planetas
+	 
+	 
+	 
+	 var geometry1 = new THREE.SphereGeometry( 240, 30, 22 );
+     var loadersol = new THREE.TextureLoader();
+     var texturesol = loadersol.load("sol.jpg");	 
+     var material = new THREE.MeshToonMaterial({
+     map: texturesol,  
+                                                });
+     var sol = new THREE.Mesh( geometry1, material );
+     scene.add( sol );
+	 
+	 
+	 
+	 
+	 var geometry2 = new THREE.SphereGeometry( 30, 30, 22 );
+     var loadermercurio = new THREE.TextureLoader();
+     var texturemercurio = loadermercurio.load("mercurio.jpg");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: texturemercurio,  
+                                                });
+     var mercurio = new THREE.Mesh( geometry2, material );
+     scene.add( mercurio );
+	 
+	 
+	 
+	 
+	 var geometry3 = new THREE.SphereGeometry( 50, 30, 22 );
+     var loadervenus = new THREE.TextureLoader();
+     var texturevenus = loadervenus.load("venus.jpg");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: texturevenus,  
+                                                });
+     var venus = new THREE.Mesh( geometry3, material );
+     scene.add( venus );
+	 
+	 
+	 
+ 
+     var geometry4 = new THREE.SphereGeometry( 60, 30, 22 );	 
+	 var loadertierra = new THREE.TextureLoader();
+     var texturetierra = loadertierra.load("tierra.jpg");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: texturetierra,  
+                                                });
+     var tierra = new THREE.Mesh( geometry4, material );
+     scene.add( tierra );
+	 
+	 
+	 
+	 
+	 var geometry5 = new THREE.SphereGeometry( 15, 30, 22 );
+     var loaderluna = new THREE.TextureLoader();
+     var textureluna = loaderluna.load("luna.jpg");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: textureluna,  
+                                                });
+     var luna = new THREE.Mesh( geometry5, material );
+     scene.add( luna );
+	 
+	 
+	 
+	 
+	 
+	 var geometry6 = new THREE.SphereGeometry( 45, 30, 22 );
+     var loadermarte = new THREE.TextureLoader();
+     var texturemarte = loadermarte.load("marte.jpg");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: texturemarte,  
+                                                });
+     var marte= new THREE.Mesh( geometry6, material );
+     scene.add( marte );
+	 
+	 
+	 
+	 
+	 var geometry6 = new THREE.SphereGeometry( 90, 30, 22 );
+     var loaderjupiter = new THREE.TextureLoader();
+     var texturejupiter = loaderjupiter.load("jupiter.jpg");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: texturejupiter,  
+                                                });
+     var jupiter= new THREE.Mesh( geometry6, material );
+     scene.add( jupiter );
+	 
+	 
+	 
+	 
+	 
+	 var geometry6 = new THREE.SphereGeometry( 50, 30, 22 );
+     var loadersaturno = new THREE.TextureLoader();
+     var texturesaturno = loadersaturno.load("saturno.jpg");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: texturesaturno,  
+                                                });
+     var saturno= new THREE.Mesh( geometry6, material );
+     scene.add( saturno);
+	 
+     var geometry10 = new THREE.TorusGeometry( 80, 15, 2, 100 );
+     var loaderanillo = new THREE.TextureLoader();
+     var textureanillo = loaderanillo.load("anillo.jpg");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: textureanillo,  
+                                                });
+     var anillo= new THREE.Mesh( geometry10, material );
+     scene.add( anillo);	 
+	 
+	 
+	 
+	 var geometry6 = new THREE.SphereGeometry( 55, 30, 22 );
+     var loaderurano = new THREE.TextureLoader();
+     var textureurano = loaderurano.load("urano.png");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: textureurano,  
+                                                });
+     var urano= new THREE.Mesh( geometry6, material );
+     scene.add( urano );
+	 
+	 
+	 
+	 
+	 
+	 
+	 var geometry6 = new THREE.SphereGeometry( 50, 30, 22 );
+     var loaderneptuno= new THREE.TextureLoader();
+     var textureneptuno = loaderneptuno.load("neptuno.jpg");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: textureneptuno,  
+                                                });
+     var neptuno= new THREE.Mesh( geometry6, material );
+     scene.add( neptuno );
+	 
+	 
+	 
+	 
+	 
+	 var geometry6 = new THREE.SphereGeometry( 20, 30, 22 );
+     var loaderpluton = new THREE.TextureLoader();
+     var texturepluton = loaderpluton.load("pluton.jpg");	 
+     var material = new THREE.MeshPhongMaterial({
+     map: texturemarte,  
+                                                });
+     var pluton= new THREE.Mesh( geometry6, material );
+     scene.add( pluton );
+	 
+	 
+	 
+	 //luces
+	 
+	 	 
+	 var light = new THREE.PointLight( 0xb4e7f2, 2.0 );
+	 light.position.set( 0, 0, 0 );
+	 scene.add (light); 
+	 
+	 
+	 //variables de apoyo	 
+	 
+	 var time=0;
+	 
+	 var rot = 0;
+	 
+	 anillo.rotation.x = 950;
+	 
+	 
+	 //render
+
+	 
+
+     var render = function () {
+	 
+	
+	 fondo1.position.z = 5000;
+	 
+	 fondo2.position.z = -5000;
+	 
+	 fondo3.position.x = 5000;
+	 
+	 fondo4.position.x = -5000;
+	 
+	 fondo5.position.y = 5000;
+	 fondo6.position.y = -5000;
+	 
+	
+	 time = time + 0.01;
+	 rot = rot + 0.007;
+	 
+	 
+	  camera.position.x = sol.position.x + 2000 * Math.sin(time/10); 
+	  camera.position.z = sol.position.z + 2000 * Math.cos(time/10);
+	  camera.lookAt( sol.position )
+	 
+	 
+	 
+     requestAnimationFrame( render );
+	 
+	 sol.position.x = 0;
+	 sol.position.y = 0;
+	 sol.rotation.x = 0;
+	 
+	 
+	 mercurio.position.x = sol.position.x + 400 * Math.cos(time);
+	 mercurio.position.z = sol.position.z + 400 * Math.sin(time);
+	 mercurio.rotation.y = rot;
+	 
+	 venus.position.x = sol.position.x  + 500 * Math.cos(time/2);
+	 venus.position.z = sol.position.z  + 500 *Math.sin(time/2);
+     venus.rotation.y = rot;	 
+	 
+	 tierra.position.x = sol.position.x + 700 * Math.cos(time/2.5);
+	 tierra.position.z = sol.position.z + 700 * Math.sin(time/2.5);
+     tierra.rotation.y = rot;	 
+	
+	 luna.position.x = tierra.position.x + 100 * Math.cos(time/3) ;
+	 luna.position.z = tierra.position.z + 100 * Math.sin(time/3) ;
+     luna.rotation.y = rot;	 
+
+     marte.position.x = sol.position.x + 800 * Math.cos(time/3.5);
+	 marte.position.z = sol.position.z + 800 * Math.sin(time/3.5);
+	 marte.rotation.y = rot; 
+
+     jupiter.position.x = sol.position.x + 1000 * Math.cos(time/4);
+	 jupiter.position.z = sol.position.z + 1000 * Math.sin(time/4);	
+	 jupiter.rotation.y = rot;
+
+     saturno.position.x = sol.position.x + 1200 * Math.cos(time/4.5);
+	 saturno.position.z = sol.position.z + 1200 * Math.sin(time/4.5);
+     anillo.position.x = saturno.position.x ;
+	 anillo.position.z = saturno.position.z ;
+     saturno.rotation.y = rot;
+     anillo.rotation.z = rot*10;	 
+
+     urano.position.x = sol.position.x + 1400 * Math.cos(time/5);
+	 urano.position.z = sol.position.z + 1400 * Math.sin(time/5);
+     urano.rotation.y = rot;	 
+
+     neptuno.position.x = sol.position.x + 1500 * Math.cos(time/5.5);
+	 neptuno.position.z = sol.position.z + 1500 * Math.sin(time/5.5);	
+     neptuno.rotation.y = rot;
+     
+	 pluton.position.x = sol.position.x + 1600 * Math.cos(time/6);
+	 pluton.position.z = sol.position.z + 1600 * Math.sin(time/6);		 
+     pluton.rotation.y = rot;
+	 
+
+
+
+   	 
+     renderer.render( scene, camera );
+     };
+
+render();
+
+
+
+
+
+    </script>
+  </body>
+</html>
